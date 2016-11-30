@@ -1,0 +1,64 @@
+<?php
+require_once('includes/dbconn.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Coromandel: My Place</title>			<!--The Text in the tab at the top of the page-->
+<meta name="" content= "">
+<meta name="" content="">
+<link rel="stylesheet" href="css/style.css" media ="screen">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">            /*Allowing it to run on ie 9*/
+</script>
+<![endif]-->
+</head>
+<body>
+	<div id ="container">
+	<header>
+	<h1><a></a></h1>
+	</header>
+	
+<nav>
+		<ul>
+        <li><a href="index.php">Home</a></li> 
+		<li><a href="activity.php?act_Activity=Relax">Relax</a></li> 
+		<li><a href="activity.php?act_Activity=On the Water">On Water </a></li> 
+		<li><a href="activity.php?act_Activity=Surfing">Surfing </a></li>
+		<li><a href="activity.php?act_Activity=In the Water">In Water</a></li> 
+		<li><a href="activity.php?act_Activity=On the Land">On Land</a></li> 
+		<li><a href="activity.php?act_Activity=On Foot">On Foot</a></li> 
+		<li><a href="activity.php?act_Activity=Events">Events</a></li> 
+	</ul>
+	
+</nav>
+	<div id="content">
+		
+<section>
+		 	<h1>Welcome To The Coromandel!</h1>
+		 	<p>In the spectacular Coromandel Peninsula, New Zealand
+		 	Thames is a historical New Zealand town situated between the calm waters of the Firth of Thames and the 			majestic ranges of the Coromandel Peninsula in New Zealand. Thames is a great place to base yourself when 			visiting the Coromandel Peninsula. Most places on the Coromandel are within one to one and a half hours drive 			from the township and of course there's bucketloads to keep you busy - whether you enjoy browsing through our 			numerous and varied speciality shops, delving into Thames' colourful history, participating in some of our 			sporting activities or experiencing our beautiful forests and coastlines.</p>
+	<br>		
+<figure>
+	<img src="Photos/AAen_1.jpg" width="615" height="323" alt="AAen_1">
+</figure>
+</section>
+
+<article>
+			<h2><?php include("includes/information.php"); echo 
+				($rsInfo['inf_title']);?> </h2>
+					<?php echo ($rsInfo['inf_content']);?>
+</article>
+</div>
+	
+<footer>    The Coromandel: Cole's Place 
+<form action="searchresult.php" method="post" id="searchform">
+   		    <label> Search The Peninsula for an activity: <input type="text" size ="18" maxlength ="30" name="search"/></label>
+   			<input type ="submit" name = "submit" value="Search" />
+</form>
+</footer>
+</div>			
+</div>
+</body>
+</html>
